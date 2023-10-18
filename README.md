@@ -11,7 +11,6 @@ import { ProductCard, ProductImage, ProductTitle, ProductButtons } from 'j2-prod
 
 ```
 <ProductCard 
-    key={ product.id }
     product={ product } 
     initialValues={{
         count: 4,

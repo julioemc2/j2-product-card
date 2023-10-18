@@ -26,7 +26,7 @@ export const ProductCard = ({ children, product, className, style, onChange, val
 
 
     // TODO: custom hook
-    const { counter, increaseBy, maxCount, isMaxCountReached, reset } 
+    const { counter, increaseBy, maxCount, reset } 
         = useProduct({ onChange, product, value, initialValues });
 
     return (
@@ -43,10 +43,10 @@ export const ProductCard = ({ children, product, className, style, onChange, val
                 { 
                     children({
                         count: counter,
-                        isMaxCountReached: !!initialValues?.count && initialValues.maxCount === counter,
                         maxCount: initialValues?.maxCount,
+                        isMaxCountReached: !!initialValues?.count && initialValues.maxCount === counter,
                         product,
-
+                        
                         increaseBy,
                         reset,
                     }) 
